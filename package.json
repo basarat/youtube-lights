@@ -1,0 +1,21 @@
+{
+  "name": "lights",
+  "version": "1.0.0",
+  "description": "Control your elgato key lights",
+  "main": "lib/index.js",
+  "bin": {
+    "lights": "lib/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build -- -w"
+  },
+  "keywords": [],
+  "author": "Basarat",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^15.6.1",
+    "axios": "0.21.1",
+    "typescript": "4.3.2"
+  }
+}
