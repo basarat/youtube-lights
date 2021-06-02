@@ -1,5 +1,5 @@
 {
-  "name": "lights",
+  "name": "youtube-lights",
   "version": "1.0.0",
   "description": "Control your elgato key lights",
   "main": "lib/index.js",
