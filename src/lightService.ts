@@ -22,10 +22,16 @@ async function setLight(ip: string, light: LightOptions) {
   }
 }
 
+let lastValues = {
+  brightness: 3,
+  temperature: 344,
+};
+
 export async function on(ip: string, light: Omit<LightOptions, 'on'>) {
+  lastValues = { ...light };
   await setLight(ip, { on: 1, ...light });
 }
 
 export async function off(ip: string) {
-  await setLight(ip, { on: 0, brightness: 0, temperature: 0 });
+  await setLight(ip, { on: 0, ...lastValues });
 }
